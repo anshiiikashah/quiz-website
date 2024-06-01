@@ -23,14 +23,11 @@
     </div>
     <div class="div1">
 
-        <input class="search" placeholder="Search">
+        <input class="search" placeholder="Search" id="searchQuiz">
         <select id="dropdown">
             <option></option>
-            <option>Geography</option>
-            <option>History</option>
-            <option value="">Music</option>
-            <option value="">Maths</option>
-            <option value="">Science</option>
+            <option value="Geography">Geography</option>
+            <option value="Science">Science</option>
 
         </select>
     </div>
@@ -47,7 +44,7 @@
         </div>
     </div>
 
-    <div id="geographyQuizzes" class="category">
+    <div id="GeographyQuizzes" class="category">
         <div class="quizBox" id="India">
             <div>India</div>
             <div class="startButton" value="India" onclick="setQuizz('India')">Start</div>
@@ -64,7 +61,7 @@
         </div>
     </div>
 
-    <div id="scienceQuizzes" class="category">
+    <div id="ScienceQuizzes" class="category">
         <div class="quizBox" id="Physics">
             <div>Physics</div>
             <div class="startButton" value="Physics" onclick="setQuizz('Physics')">Start</div>
@@ -136,6 +133,24 @@
             </div>
         </div>
         <div id="equalbutton" class="calcBtn">=</div>
+    </div>
+
+    <div id="progressBar">
+        <div style="font-size: 250%;">Your Progress</div>
+        <div id="panel">
+            <div>
+                <div>Total questions: <span id="totalQuestionSpan">0</span></div>
+                <div>Questions correctly answered: <span id="correctAnsweredSpan">0</span></div>
+                <div>Unattempted questions: <span id="unattemptedQuestionsSpan">0</span></div>
+            </div>
+
+            <div id="progressRight">
+                <div id="progressCircle"><span id="percentageSpan">0</span>%</div>
+                <div id="comment"><span id="commentSpan">Try Again</span></div>
+            </div>
+        </div>
+
+        <div id="back2Home">Home</div>
     </div>
 </body>
 

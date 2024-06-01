@@ -5,7 +5,8 @@
 
 body {
     background-image: linear-gradient(black, rgb(42, 42, 63));
-    height: 100vh;
+    min-height: 100vh;
+    height: max-content;
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
@@ -102,13 +103,13 @@ header {
 
     gap: 2.5vh;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* border:3px solid rgb(27, 22, 44); */
+    border: 0.3vh solid black;
     color: black;
 }
 
 .startButton {
     background-color: rgb(53, 194, 53);
-
+    border: 0.2vh solid black;
     padding: 1vh;
     width: 80%;
     transition: transform 0.2s;
@@ -221,10 +222,9 @@ header {
 
 #calculatorView{
     background-color: black;
-    border-bottom: white 0.2vh solid;
-    border-right: white 0.2vh solid;
+    border: white 0.2vh solid;
     color: white;
-    font-size: 135%;
+    font-size: 125%;
     padding: 1.5vh;
     width: max-content;
     transition: all 0.2s linear;
@@ -293,4 +293,66 @@ header {
 }
 #equalbutton{
     width: 95%;
+}
+
+#progressBar{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 5vh;
+    padding: 2.5vh;
+    width: 45%;
+    margin: 20vh auto;
+}
+#progressBar>div{
+    background-color: white;
+    color: black;
+    width: 100%;
+    padding: 2.5vh;
+}
+#panel{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 150%;
+}
+#progressRight{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2.5vh;
+}
+#progressCircle{
+    width: 30vh;
+    height: 30vh;
+    background-color: rgb(103, 115, 244);
+    font-size: 220%;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+#comment{
+    width: 30vh;
+}
+
+#back2Home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-size: 135%;
+    transition: all 0.2s linear;
+}
+
+#back2Home:hover{
+    scale: 0.7;
+}
+#progressBar{
+    display: none;
 }
