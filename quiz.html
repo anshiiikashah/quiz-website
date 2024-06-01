@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizz</title>
+    <script src="search.js" defer></script>
+    <script src="calculator.js" defer></script>
+    <script src="quiz.js" defer></script>
+    <link rel="stylesheet" href="quizStyle.css">
+</head>
+
+<body>
+    <div id="calculatorView">Calculator</div>
+
+
+    <header> Q U I Z Z Y </header>
+
+
+    <div id="tag">
+        Dive into the world of quizzes and test yourself !
+    </div>
+    <div class="div1">
+
+        <input class="search" placeholder="Search">
+        <select id="dropdown">
+            <option></option>
+            <option>Geography</option>
+            <option>History</option>
+            <option value="">Music</option>
+            <option value="">Maths</option>
+            <option value="">Science</option>
+
+        </select>
+    </div>
+
+    <div id="container">
+        <div class="box" id="box-1">
+            Choose from a wide range of categories
+        </div>
+        <div class="box" id="box-2">
+            Reasonable time for each difficulty
+        </div>
+        <div class="box" id="box-3">
+            Get your progress report at the end of the quiz
+        </div>
+    </div>
+
+    <div id="geographyQuizzes" class="category">
+        <div class="quizBox" id="India">
+            <div>India</div>
+            <div class="startButton" value="India" onclick="setQuizz('India')">Start</div>
+        </div>
+
+        <div class="quizBox" id="Mountains">
+            <div>Mountains</div>
+            <div class="startButton" value="Mountains" onclick="setQuizz('Mountains')">Start</div>
+        </div>
+
+        <div class="quizBox" id="Rivers">
+            <div>Rivers</div>
+            <div class="startButton" value="Rivers" onclick="setQuizz('Rivers')">Start</div>
+        </div>
+    </div>
+
+    <div id="scienceQuizzes" class="category">
+        <div class="quizBox" id="Physics">
+            <div>Physics</div>
+            <div class="startButton" value="Physics" onclick="setQuizz('Physics')">Start</div>
+        </div>
+
+        <div class="quizBox" id="Chemistry">
+            <div>Chemistry</div>
+            <div class="startButton" value="Chemistry" onclick="setQuizz('Chemistry')">Start</div>
+        </div>
+
+        <div class="quizBox" id="Biology">
+            <div>Biology</div>
+            <div class="startButton" value="Biology" onclick="setQuizz('Biology')">Start</div>
+        </div>
+    </div>
+
+    <div id="difficultyBox">
+        <div><span id="quizzName">For Example</span></div>
+        <div id="difficultyControls">
+            <div class="level" onclick="startQuiz('Easy')">Easy</div>
+            <div class="level" onclick="startQuiz('Medium')">Medium</div>
+            <div class="level" onclick="startQuiz('Hard')">Hard</div>
+        </div>
+    </div>
+
+    <div id="timer">00:<span id="timerSpan">30</span></div>
+    <div class="questionBox">
+        <div id="question">
+        </div>
+        <div id="option">
+            <div class="option" id="option-1" onclick="checkAnswer(0)"></div>
+            <div class="option" id="option-2" onclick="checkAnswer(1)"></div>
+            <div class="option" id="option-3" onclick="checkAnswer(2)"></div>
+            <div class="option" id="option-4" onclick="checkAnswer(3)"></div>
+        </div>
+
+        <div id="controls">
+            <div id="nextBtn" onclick="nextQuestion()">Next</div>
+        </div>
+    </div>
+
+
+
+    <div id="calculator">
+        <div id="screen">
+            <input type="text" id="screenInput" value="0">
+        </div>
+
+        <div id="controls">
+            <div id="numbers">
+                <div class="calcBtn" id="calcBtn1">1</div>
+                <div class="calcBtn" id="calcBtn2">2</div>
+                <div class="calcBtn" id="calcBtn3">3</div>
+                <div class="calcBtn" id="calcBtn4">4</div>
+                <div class="calcBtn" id="calcBtn5">5</div>
+                <div class="calcBtn" id="calcBtn6">6</div>
+                <div class="calcBtn" id="calcBtn7">7</div>
+                <div class="calcBtn" id="calcBtn8">8</div>
+                <div class="calcBtn" id="calcBtn9">9</div>
+                <div class="calcBtn" id="ac">AC</div>
+                <div class="calcBtn" id="calcBtn0">0</div>
+                <div class="calcBtn" id="c">C</div>
+            </div>
+            <div id="operations">
+                <div class="calcBtn">+</div>
+                <div class="calcBtn">-</div>
+                <div class="calcBtn">*</div>
+                <div class="calcBtn">/</div>
+            </div>
+        </div>
+        <div id="equalbutton" class="calcBtn">=</div>
+    </div>
+</body>
+
+</html>

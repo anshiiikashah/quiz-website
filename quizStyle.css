@@ -1,0 +1,296 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: linear-gradient(black, rgb(42, 42, 63));
+    height: 100vh;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 250%;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    color: white;
+    text-shadow: 0px 0px 10px black;
+}
+
+.div1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+    gap: 3vh;
+}
+
+.search {
+    width: 50vw;
+    border: none;
+
+    padding: 1vh;
+    transition: transform 0.2s;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.search:hover {
+    transform: scale(1.1);
+}
+
+#dropdown {
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+
+    padding: 1vh;
+}
+
+#tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+    font-size: 170%
+}
+
+#container {
+    display: flex;
+    gap: 10vh;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7.5vh;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 2vh;
+    height: 30vh;
+    width: 30vh;
+    background-color: rgb(86, 86, 128);
+    text-align: center;
+    font-size: 130%;
+    color: black;
+}
+#container{
+    display: none;
+}
+.category {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 7.5vh;
+    margin-top: 10vh;
+    padding: 5vh;
+    width: 60%;
+    margin: 10vh auto;
+}
+
+.quizBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    font-size: 125%;
+    padding: 2.5vh;
+
+    gap: 2.5vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* border:3px solid rgb(27, 22, 44); */
+    color: black;
+}
+
+.startButton {
+    background-color: rgb(53, 194, 53);
+
+    padding: 1vh;
+    width: 80%;
+    transition: transform 0.2s;
+    color: black;
+}
+
+.startButton:hover {
+    transform: scale(1.1);
+}
+
+.questionBox{
+    width: 40%;
+    margin: 5vh auto;
+    background-color: white;
+    color: #000000;
+    padding: 3vh;
+    /* border: 0.5vh solid black; */
+    font-size: 120%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 5vh;
+}
+#option{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1.25vh;
+    width: 100%;
+}
+.option{
+    padding: 1.5vh;
+    /* border: 2px solid black; */
+    box-shadow: 0px 0px 2vh black;
+    width: 95%;
+    transition: all 0.2s linear;
+}
+.option:hover{
+    background-color: rgb(159, 157, 157);
+}
+#timer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 175%;
+    margin-top: 10vh;
+}
+#controls{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1vh;
+    align-items: center;
+    width: 97%;
+}
+#nextBtn{
+    
+    padding: 1.5vh;
+    box-shadow: 0px 0px 2vh black;
+    width: 20%;
+    text-align: center;
+    background-color: green;
+    color: white;
+
+}
+
+.questionBox,#timer{
+    display: none;
+}
+
+#difficultyBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 30%;
+    padding: 2.5vh;
+    background-color: white;
+    color: black;
+    text-align: center;
+    margin: 20vh auto;
+    gap: 5vh;
+    font-size: 150%;
+}
+#difficultyBox>div{
+    text-align: center;
+    width: 100%;
+}
+#difficultyControls{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    gap: 5vh;
+    color: white;
+    font-size: 75%;
+}
+.level{
+    background-color: rgb(174, 101, 242);
+    width: 30%;
+    text-align: center;
+    padding: 1.5vh;
+}
+#difficultyBox{
+    display: none;
+}
+
+
+
+#calculatorView{
+    background-color: black;
+    border-bottom: white 0.2vh solid;
+    border-right: white 0.2vh solid;
+    color: white;
+    font-size: 135%;
+    padding: 1.5vh;
+    width: max-content;
+    transition: all 0.2s linear;
+}
+
+#calculatorView:hover{
+    background-color: white;
+    color: black;
+    scale: 1.1;
+}
+
+
+
+#calculator{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 1.5vh;
+    width: 46vh;
+    position: absolute;
+    top: 30vh;
+    right: 0;
+}
+#screen{
+    background-color: white;
+    width: 95%;
+    padding: 1.5vh;
+}
+#screenInput{
+    border: none;
+    background-color: transparent;
+    font-size: 140%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: right;
+    width: 95%;
+}
+#controls{
+    margin-top: 4vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#numbers{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 2.5vh;
+}
+.calcBtn{
+    text-align: center;
+    width: 10vh;
+    font-size: 130%;
+}
+#operations{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 2.5vh;
+}
+
+#calculator{
+    display: none;
+}
+#calculatorView{
+    display: none;
+}
+#equalbutton{
+    width: 95%;
+}
